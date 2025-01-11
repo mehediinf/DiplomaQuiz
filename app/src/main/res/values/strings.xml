@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="getStartTxt">Welcome to our app. The app is excellent for diploma holders and shares with friends.</string>
+    <string name="create_account">Create Account</string>
+    <string name="already_account">I Already Have An Account</string>
+    <string name="sign_up">Sign up</string>
+    <string name="create_account_description">Please enter your username,email address and password.</string>
+    <string name="remember_me">Remember me</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="enter_username">Username</string>
+    <string name="enter_email">Email</string>
+    <string name="enter_password">Password</string>
+    <string name="hello_there">Hello there</string>
+    <string name="forgotten_password">Forgotten password?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="go_to_home">Go to Home</string>
+    <string name="comment_new_password">You have successfully reset and created a new password.</string>
+</resources>

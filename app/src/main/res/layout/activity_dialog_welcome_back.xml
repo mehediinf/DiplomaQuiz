@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_background"
+    android:padding="20dp"
+    android:gravity="center"
+    android:layout_margin="30dp"
+    tools:context=".dialog_welcome_back">
+
+
+    <!-- User Icon -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/shield"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Success Text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_back"
+        android:textColor="@color/blue_dark"
+        android:textSize="22sp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center" />
+
+    <!-- Description -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/comment_new_password"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:padding="20dp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_Home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/go_to_home"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+
+        />
+
+
+</LinearLayout>
