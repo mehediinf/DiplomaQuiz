@@ -6,12 +6,21 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/dq111_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/dq111_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
+        <activity
+            android:name=".CreateNewPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VerifyCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
         <activity
             android:name=".HomePageActivity"
             android:exported="false" />
@@ -24,13 +33,7 @@
         <activity
             android:name=".CreateAccountActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity">
-
-            <!-- Parent Activity Meta Data -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".GetStartActivity"
             android:exported="false" />

@@ -17,7 +17,7 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/shield"
+        android:src="@drawable/security"
         android:layout_marginBottom="16dp" />
 
     <!-- Success Text -->
@@ -47,6 +47,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/go_to_home"
+        android:background="@drawable/btn_shape_capsule"
+        android:textColor="@drawable/btn_txt_selector"
         android:textSize="18sp"
         android:layout_margin="20dp"
 

@@ -48,7 +48,8 @@
             android:layout_marginRight="20dp"
             android:padding="10dp"
             android:textSize="22sp"
-            android:background="@drawable/create_button_with_shadow"
+            android:textColor="@drawable/btn_txt_selector"
+            android:background="@drawable/btn_shape_capsule"
             android:elevation="8dp"
             />
 
@@ -63,7 +64,8 @@
             android:layout_marginTop="10dp"
             android:textSize="19sp"
             android:padding="10dp"
-            android:background="@drawable/create_button_with_shadow"
+            android:textColor="@drawable/btn_txt_selector"
+            android:background="@drawable/btn_shape_capsule"
             android:elevation="8dp" />
 
 

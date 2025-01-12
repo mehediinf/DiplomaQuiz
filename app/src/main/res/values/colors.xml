@@ -6,5 +6,22 @@
     <color name="blue_dark">#0D47A1</color>
     <color name="orange">#FF9800</color>
     <color name="light_violet_blue">#6949ff</color>
+    <color name="purple">#7E57C2</color>
+
+    <color name="toolbarBackground">#6200EE</color>
+    <color name="colorAccent">#FF5722</color>
+
+    <!-- Basic gray color -->
+    <color name="gray">#504E4E</color> <!-- Standard gray color -->
+
+    <!-- Light gray color -->
+    <color name="light_gray">#D3D3D3</color> <!-- Light gray -->
+
+    <!-- Dark gray color -->
+    <color name="dark_gray">#8C8C8F</color> <!-- Dark gray -->
+
+    <!-- Custom gray color -->
+    <color name="custom_gray">#4D5A4E</color> <!-- Custom gray shade -->
+
 
 </resources>

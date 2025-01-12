@@ -11,38 +11,29 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class dialog_welcome_back extends AppCompatActivity {
+public class ForgotPasswordActivity extends BaseActivity {
 
-    private Button btnHome;
-
+    private Button continueBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dialog_welcome_back);
+        setContentView(R.layout.activity_forgot_password);
 
-        btnHome = findViewById(R.id.btn_Home);
+        // Toolbar setup
+        setupToolbar("Forgot Password", true);
 
-        btnHome.setOnClickListener(new View.OnClickListener() {
+
+        continueBtn = findViewById(R.id.btn_SignInContinueId);
+        continueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(dialog_welcome_back.this,HomePageActivity.class);
+                Intent intent = new Intent(ForgotPasswordActivity.this,VerifyCodeActivity.class);
                 startActivity(intent);
-
-
 
             }
         });
-
-
-
-
-
-
-
-
-
 
     }
 }

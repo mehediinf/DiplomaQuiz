@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background_all"
     tools:context=".CreateAccountActivity">
 
     <!-- Toolbar -->
@@ -12,8 +13,9 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#FFFFFF"
-        android:titleTextColor="@color/black"
+        android:background="@color/light_gray"
+        style="@style/CustomButtonStyle"
+        android:titleTextColor="@color/blue"
         android:title="@string/create_account" />
 
 
@@ -58,6 +60,7 @@
             android:layout_height="wrap_content"
             android:text="@string/create_account_description"
             android:textSize="16sp"
+            android:textColor="@color/gray"
             android:gravity="center"
             android:paddingTop="8dp" />
 
@@ -66,18 +69,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/username"
+            android:textColor="@color/black"
             android:layout_marginTop="16dp" />
 
         <EditText
             android:id="@+id/etUsername"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:hint="@string/enter_username"
+            android:textColorHint="@color/dark_gray"
+            android:background="@drawable/edt_background_style"
+            android:textColor="@color/gray"
+            android:padding="10dp"
             android:inputType="text" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:text="@string/email"
             android:layout_marginTop="16dp" />
 
@@ -85,27 +94,55 @@
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/edt_background_style"
+            android:textColor="@color/gray"
+            android:padding="10dp"
+            android:textColorHint="@color/dark_gray"
             android:hint="@string/enter_email"
             android:inputType="textEmailAddress" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:text="@string/password"
             android:layout_marginTop="16dp" />
 
-        <EditText
-            android:id="@+id/etPassword"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/enter_password"
-            android:inputType="textPassword" />
+            android:orientation="horizontal"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edt_background_style"
+                android:layout_weight="1"
+                android:textColor="@color/gray"
+                android:hint="@string/password"
+                android:textColorHint="@color/dark_gray"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/togglePasswordVisibility"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                android:src="@android:drawable/ic_menu_view"
+                android:contentDescription="Toggle Password Visibility" />
+        </LinearLayout>
 
         <CheckBox
             android:id="@+id/cbRememberMe"
+            android:buttonTint="@color/gray"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:cursorVisible="true"
             android:text="@string/remember_me"
+            android:textColor="@color/black"
             android:layout_marginTop="8dp" />
     </LinearLayout>
 
@@ -126,6 +163,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="or"
                 android:textAlignment="center"
                 />
@@ -152,10 +190,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/continue_with_google"
                 android:background="#F1F0F0"
-                android:textAlignment="textStart"
-                android:textSize="20dp"
-                android:textColor="#000"
+                android:textAlignment="center"
+                android:textCursorDrawable="@color/blue"
+                android:paddingRight="50dp"
+                android:paddingStart="20dp"
+                android:textSize="17dp"
+                android:textColor="@color/custom_gray"
                 android:drawableLeft="@drawable/google"
+
                 />
 
 
@@ -177,6 +219,7 @@
             android:layout_height="wrap_content"
             android:text="@string/sign_up"
             android:textSize="22sp"
+            android:background="@drawable/btn_shape_capsule"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             />

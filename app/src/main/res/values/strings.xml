@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Diploma Quiz</string>
     <string name="getStartTxt">Welcome to our app. The app is excellent for diploma holders and shares with friends.</string>
     <string name="create_account">Create Account</string>
     <string name="already_account">I Already Have An Account</string>
@@ -11,7 +11,7 @@
     <string name="password">Password</string>
     <string name="continue_with_google">Continue with Google</string>
     <string name="enter_username">Username</string>
-    <string name="enter_email">Email</string>
+    <string name="enter_email">a@gmail.com</string>
     <string name="enter_password">Password</string>
     <string name="hello_there">Hello there</string>
     <string name="forgotten_password">Forgotten password?</string>
@@ -19,4 +19,11 @@
     <string name="welcome_back">Welcome Back!</string>
     <string name="go_to_home">Go to Home</string>
     <string name="comment_new_password">You have successfully reset and created a new password.</string>
+    <string name="for_pass_des">Enter your email address to get an OTP code to reset your password.</string>
+    <string name="continues">Continue</string>
+    <string name="forgotten">Forgot Password</string>
+    <string name="verifyMailDes">We have sent the OTP verification code to your email address. Check your email and enter the code below.</string>
+    <string name="create_a_new_password">Create a new password</string>
+    <string name="confirm_a_new_password">Confirm a new password</string>
+    <string name="CreateNewPassDes">Save the new password in a safe place.If you forget it then you have to do a forgot password again.</string>
 </resources>

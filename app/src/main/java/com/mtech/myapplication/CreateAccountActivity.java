@@ -22,7 +22,7 @@ public class CreateAccountActivity extends BaseActivity {
 
 
         // `setupToolbar` মেথড কল করে টাইটেল এবং ব্যাক বাটন সেট করা
-        setupToolbar("", true);
+        setupToolbar("Create Account", true);
 
 
 
@@ -47,7 +47,22 @@ public class CreateAccountActivity extends BaseActivity {
 
         // ডায়ালগ দেখানো
         dialog.show();
+
+//ProgressBar Time Set ...............
+
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                Intent intent = new Intent(CreateAccountActivity.this,HomePageActivity.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//        },2500);
+
+
+
     }
+
 
 
 }
