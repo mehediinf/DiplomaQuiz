@@ -1,8 +1,11 @@
 package com.mtech.myapplication;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
@@ -30,17 +33,34 @@ public class CreateNewPasswordActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(CreateNewPasswordActivity.this,)
+                showSuccessDialog();
 
 
             }
         });
 
 
-
-
-
-
-
     }
+
+
+    private void showSuccessDialog() {
+        // Custom Dialog তৈরি
+        Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.activity_dialog_welcome_back);
+
+        // ডায়ালগের আকার ঠিক করা
+        dialog.getWindow().setLayout(
+                WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.WRAP_CONTENT
+        );
+        dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+
+        // ডায়ালগ দেখানো
+        dialog.show();
+    }
+
+
+
+
 }

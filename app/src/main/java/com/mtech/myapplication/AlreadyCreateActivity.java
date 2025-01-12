@@ -3,7 +3,7 @@ package com.mtech.myapplication;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.os.Handler;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -11,9 +11,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class AlreadyCreateActivity extends BaseActivity {
 
@@ -75,15 +72,29 @@ public class AlreadyCreateActivity extends BaseActivity {
             return;
         }
 
-        showSuccessDialog();
+        if (showSuccessDialog()){
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent(AlreadyCreateActivity.this,HomePageActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            },2500);
+
+        }
+
+
+
 
     }
 
-    private void showSuccessDialog() {
+    private boolean showSuccessDialog() {
         // Custom Dialog তৈরি
         Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.activity_dialog_welcome_back);
+        dialog.setContentView(R.layout.dialog_success);
 
         // ডায়ালগের আকার ঠিক করা
         dialog.getWindow().setLayout(
@@ -94,6 +105,7 @@ public class AlreadyCreateActivity extends BaseActivity {
 
         // ডায়ালগ দেখানো
         dialog.show();
+        return true;
     }
 
 
