@@ -1,0 +1,90 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@color/purple"
+    android:layout_marginBottom="5dp">
+
+    <!-- SL and Profile Image Section -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:gravity="center|center_horizontal">
+
+        <!-- SL TextView -->
+        <TextView
+            android:id="@+id/tv_SL_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SL"
+            android:textSize="15sp"
+            android:layout_marginRight="7dp"
+            android:textColor="@color/black" />
+
+        <!-- Profile Picture -->
+        <LinearLayout
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/profile_pic_shape"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/studentImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/user_avatar" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Name and Department Section -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.55"
+        android:gravity="left"
+        android:orientation="vertical">
+
+        <!-- Student Name -->
+        <TextView
+            android:id="@+id/tv_StudentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Md. Mehedi Hasan"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+        <!-- Department -->
+        <TextView
+            android:id="@+id/tv_Department"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CSE"
+            android:textSize="14sp"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <!-- Score Section -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.15">
+
+        <TextView
+            android:id="@+id/tv_Score"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Score"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+    </LinearLayout>
+</LinearLayout>
