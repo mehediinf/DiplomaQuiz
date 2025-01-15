@@ -8,11 +8,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import java.util.Objects;
 
 public class CreateNewPasswordActivity extends BaseActivity {
 
@@ -26,7 +22,7 @@ public class CreateNewPasswordActivity extends BaseActivity {
 
 
         // Toolbar setup
-        setupToolbar("Forgot Password", true);
+        setupToolbar("New Password", true);
 
         btnCreContinue = findViewById(R.id.btn_ContinuePassId);
         btnCreContinue.setOnClickListener(new View.OnClickListener() {
@@ -47,10 +43,10 @@ public class CreateNewPasswordActivity extends BaseActivity {
         // Custom Dialog তৈরি
         Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.activity_dialog_welcome_back);
+        dialog.setContentView(R.layout.wel_come_back);
 
         // ডায়ালগের আকার ঠিক করা
-        dialog.getWindow().setLayout(
+        Objects.requireNonNull(dialog.getWindow()).setLayout(
                 WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.WRAP_CONTENT
         );
@@ -58,6 +54,19 @@ public class CreateNewPasswordActivity extends BaseActivity {
 
         // ডায়ালগ দেখানো
         dialog.show();
+
+
+        Button btnHome = dialog.findViewById(R.id.btnHomeId);
+        btnHome.setOnClickListener(view -> {
+            // ডায়ালগ বন্ধ এবং MainActivity তে যাওয়া
+            dialog.dismiss();
+            Intent intent = new Intent(CreateNewPasswordActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        });
+
+
+
     }
 
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Home"
+        android:icon="@drawable/baseline_home_24"
+        android:id="@+id/menuHome"
+        />
+    <item
+        android:title="Scoreboard"
+        android:icon="@drawable/baseline_scoreboard_24"
+        android:id="@+id/menuScoreboard"
+        />
+    <item
+        android:title="Notification"
+        android:icon="@drawable/baseline_notifications_24"
+        android:id="@+id/menuNotification"
+        />
+    <item
+        android:title="Profile"
+        android:icon="@drawable/baseline_person_24"
+        android:id="@+id/menuProfile"
+        />
+    <item
+        android:title="Menu"
+        android:icon="@drawable/baseline_menu_24"
+        android:id="@+id/menuMenu"
+        />
+</menu>

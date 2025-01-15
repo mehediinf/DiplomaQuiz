@@ -77,7 +77,7 @@ public class AlreadyCreateActivity extends BaseActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Intent intent = new Intent(AlreadyCreateActivity.this,HomePageActivity.class);
+                    Intent intent = new Intent(AlreadyCreateActivity.this,MainActivity.class);
                     startActivity(intent);
                     finish();
                 }
