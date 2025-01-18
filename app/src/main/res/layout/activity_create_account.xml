@@ -19,7 +19,6 @@
         android:title="@string/create_account" />
 
 
-
     <!-- Content Section -->
     <LinearLayout
         android:layout_width="match_parent"

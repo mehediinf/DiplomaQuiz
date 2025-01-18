@@ -1,14 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MenuFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+
+        <!-- Premium Banner -->
+        <LinearLayout
+            android:id="@+id/premium_banner"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:orientation="vertical"
+            android:layout_margin="15dp"
+            android:gravity="bottom|left"
+            android:layout_gravity="center"
+            android:background="@drawable/setting_background2"
+            android:padding="16dp"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Setting"
+                android:layout_marginLeft="30dp"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#FFFFFF" />
+
+
+        </LinearLayout>
+
+        <!-- Options List -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Personal Info -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_person_24"
+                        android:layout_marginStart="15dp"
+                         />
+
+                    <TextView
+                        android:id="@+id/tv_ParsonalInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Personal Info"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+
+                <!-- Notification -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_security_24"
+                        android:layout_marginStart="15dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_Security"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Security"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+
+                <!-- Music & Effects -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_help_center_24"
+                        android:layout_marginStart="15dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_HelpCenter"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Help Center"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginEnd="15dp"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_info_24"
+                        android:layout_marginStart="15dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_About"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="About"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+
+                <!-- Add other items here similarly -->
+
+                <!-- Logout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_logout_24"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_Logout"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Logout"
+                        android:textColor="#E91E63"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+    </LinearLayout>
+
+
 
 </FrameLayout>
