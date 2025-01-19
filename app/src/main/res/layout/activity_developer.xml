@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#B5B9BC"
+    tools:context=".DeveloperActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#1B74BA"
+        android:titleTextColor="@color/black" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    android:padding="15dp"
+    >
+
+
+    <TextView
+        android:id="@+id/tvDeveloperName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Md. Mehedi Hasan"
+        android:textSize="26sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="20dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#7BB4E2"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="10dp"
+        />
+
+
+    <ListView
+        android:id="@+id/contact_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/SpinnerTextAppearance"
+        android:entries="@array/developer_contact_info" />
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

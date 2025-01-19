@@ -7,158 +7,151 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/background_all"
-    tools:context=".AboutActivity">
-
+    tools:context=".ContactUsActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/blue"
+        android:background="#1B74BA"
         android:titleTextColor="@color/black" />
 
-
-    <LinearLayout
-        android:id="@+id/premium_banner"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.35"
-        android:orientation="vertical"
-        android:layout_margin="15dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:padding="16dp"
-        tools:ignore="RtlHardcoded">
-
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/dq111_logo"
-
-            />
-
-        <TextView
-            android:layout_marginTop="30dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Diploma Quiz v0.1.1"
-            android:textSize="25sp"
-            android:fontFamily="sans-serif-medium"
-            android:textColor="@color/black" />
-
-
-    </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.65"
+        android:layout_weight="0.7"
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Developer Info -->
+        <!-- Personal Info -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:background="@drawable/buttonshape"
-            android:layout_marginBottom="15dp"
-
+            android:layout_margin="3dp"
             >
-
-            <TextView
-                android:id="@+id/tv_Developer"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginStart="26dp"
-                android:layout_gravity="center"
-                android:gravity="center|left"
-                android:text="Developer"
-                android:textColor="#212121"
-                android:textSize="19sp" />
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/baseline_keyboard_arrow_right_24"
-                android:layout_marginRight="15dp"
+                android:src="@drawable/cusomer_service"
+                android:layout_marginStart="15dp"
                 />
+
+            <TextView
+                android:id="@+id/tv_HelpCenter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:layout_gravity="center"
+                android:gravity="center|left"
+                android:text="Help Center"
+                android:textColor="#212121"
+                android:textSize="18sp" />
+
+
         </LinearLayout>
 
-        <!-- Privacy Policy -->
+        <!-- Contact -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:background="@drawable/buttonshape"
-            android:layout_marginBottom="15dp"
-
+            android:layout_margin="3dp"
             >
-
-
-            <TextView
-                android:id="@+id/tv_PrivacyPolicy"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginStart="26dp"
-                android:layout_gravity="center"
-                android:gravity="center|left"
-                android:text="Privacy Policy"
-                android:textColor="#212121"
-                android:textSize="19sp" />
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/baseline_keyboard_arrow_right_24"
-                android:layout_marginRight="15dp"
+                android:src="@drawable/whatsapp"
+                android:layout_marginStart="15dp"
                 />
+
+            <TextView
+                android:id="@+id/tv_WhatsApp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:layout_gravity="center"
+                android:gravity="center|left"
+                android:text="WhatsApp"
+                android:textColor="#212121"
+                android:textSize="18sp" />
+
+
         </LinearLayout>
 
-        <!--Term Condition-->
+        <!-- FAQ -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:background="@drawable/buttonshape"
-            android:layout_marginBottom="15dp"
+            android:layout_margin="3dp"
             >
-
-            <TextView
-                android:id="@+id/tv_TermCondition"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginStart="26dp"
-                android:layout_gravity="center"
-                android:gravity="center|left"
-                android:text="Term Condition"
-                android:textColor="#212121"
-                android:textSize="19sp" />
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/baseline_keyboard_arrow_right_24"
-                android:layout_marginEnd="15dp"
+                android:src="@drawable/facebook"
+                android:layout_marginStart="15dp"
                 />
+
+            <TextView
+                android:id="@+id/tv_Facebook"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:layout_gravity="center"
+                android:gravity="center|left"
+                android:text="Facebook"
+                android:textColor="#212121"
+                android:textSize="18sp" />
+
+
         </LinearLayout>
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/buttonshape"
+            android:layout_margin="3dp"
+            >
 
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/telegram"
+                android:layout_marginStart="15dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_Telegram"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:layout_gravity="center"
+                android:gravity="center|left"
+                android:text="Telegram"
+                android:textColor="#212121"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
 
     </LinearLayout>
-
-
-
-
-
-
 
 
 </LinearLayout>

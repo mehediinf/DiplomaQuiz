@@ -20,7 +20,7 @@ public class HelpCenterActivity extends BaseActivity {
         setContentView(R.layout.activity_help_center);
 
         // Toolbar setup
-        setupToolbar("Personal info", true);
+        setupToolbar("Help Center", true);
 
         TextView helpTextView = findViewById(R.id.helpTextView);
         helpTextView.setText(Html.fromHtml(getString(R.string.help_center_txt), Html.FROM_HTML_MODE_LEGACY));

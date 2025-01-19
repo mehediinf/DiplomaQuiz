@@ -13,7 +13,16 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".LogoutActivity"
+            android:name=".ContactUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AccessibilityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrivacyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeveloperActivity"
             android:exported="false" />
         <activity
             android:name=".AboutActivity"

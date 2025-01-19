@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:layout_gravity="center"
     android:orientation="vertical"
     tools:context=".PersonalInfoActivity">
 
@@ -13,7 +14,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/light_gray"
+        android:background="#1B74BA"
         android:titleTextColor="@color/black" />
 
 <LinearLayout
@@ -36,18 +37,19 @@
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:scaleType="centerCrop"
+            android:background="@drawable/profile_pic_shape"
             android:src="@drawable/user_avatar"
-            android:padding="5dp"
-            android:background="@drawable/profile_pic_shape" />
+            android:padding="5dp" />
+
 
         <!-- Edit Button -->
         <ImageView
-            android:id="@+id/edit_button"
+            android:id="@+id/imgView_ImageEdt"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_gravity="bottom|end"
             android:layout_margin="8dp"
-            android:background="@drawable/circle_background"
+            android:background="@drawable/background_notice"
             android:src="@drawable/ic_edit"
             android:contentDescription="Edit Button" />
     </FrameLayout>
@@ -68,6 +70,7 @@
             android:layout_marginTop="8dp" />
 
         <EditText
+            android:id="@+id/edt_FullName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Name"
@@ -86,6 +89,7 @@
             android:layout_marginTop="8dp" />
 
         <EditText
+            android:id="@+id/edt_Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="a@gmail.com"
@@ -104,6 +108,7 @@
             android:layout_marginTop="8dp" />
 
         <EditText
+            android:id="@+id/edt_PhoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="+8801 700-000000"
@@ -127,6 +132,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/edt_DateOfBirth"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -138,6 +144,7 @@
                 android:padding="8dp" />
 
             <ImageView
+                android:id="@+id/imgView_DateMonth"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/baseline_calendar_month_24"
@@ -154,6 +161,7 @@
             android:layout_marginTop="8dp" />
 
         <Spinner
+            android:id="@+id/Spinner_Gender"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/edt_background_style"
@@ -165,6 +173,7 @@
 
     <!-- Update Button -->
     <Button
+        android:id="@+id/btn_Update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Update Data"
@@ -174,5 +183,4 @@
         android:layout_marginTop="16dp" />
 
 </LinearLayout>
-
 </LinearLayout>

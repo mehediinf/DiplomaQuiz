@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,7 +20,7 @@ import androidx.fragment.app.Fragment;
 
 public class MenuFragment extends Fragment {
 
-    private LinearLayout personalInfoLayout, securityLayout, helpCenterLayout, aboutLayout, logoutLayout;
+    private TextView tvPrsonal, tvFaq, tvContact, tvShareApp, tvRating,tvFeedback,tvAbout,tvLogout;
 
     @SuppressLint("WrongViewCast")
     @Nullable
@@ -28,11 +29,15 @@ public class MenuFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_menu, container, false);
 
         // Initialize views
-        personalInfoLayout = view.findViewById(R.id.tv_ParsonalInfo);
-        securityLayout = view.findViewById(R.id.tv_Security);
-        helpCenterLayout = view.findViewById(R.id.tv_HelpCenter);
-        aboutLayout = view.findViewById(R.id.tv_About);
-        logoutLayout = view.findViewById(R.id.tv_Logout);
+        tvPrsonal = view.findViewById(R.id.tv_ParsonalInfo);
+        tvFaq = view.findViewById(R.id.tv_FAQ);
+        tvContact = view.findViewById(R.id.tv_ContactUs);
+        tvShareApp = view.findViewById(R.id.tv_ShareApp);
+        tvRating = view.findViewById(R.id.tv_AppRating);
+        tvFeedback = view.findViewById(R.id.tv_Feedback);
+        
+        tvAbout = view.findViewById(R.id.tv_About);
+        tvLogout = view.findViewById(R.id.tv_Logout);
 
         // Set click listeners
         setMenuItemClickListeners();
@@ -41,20 +46,52 @@ public class MenuFragment extends Fragment {
     }
 
     private void setMenuItemClickListeners() {
-        personalInfoLayout.setOnClickListener(v -> navigateToActivity(PersonalInfoActivity.class, "Navigating to Personal Info"));
-        securityLayout.setOnClickListener(v -> navigateToActivity(SecurityActivity.class, "Navigating to Security"));
-        helpCenterLayout.setOnClickListener(v -> navigateToActivity(HelpCenterActivity.class, "Navigating to Help Center"));
-        aboutLayout.setOnClickListener(v -> navigateToActivity(AboutActivity.class, "Navigating to About"));
-        logoutLayout.setOnClickListener(v -> {
-            Toast.makeText(getContext(), "Logging Out", Toast.LENGTH_SHORT).show();
+        tvPrsonal.setOnClickListener(v -> {
+            Toast.makeText(getContext(), "Personal Info", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getActivity(), PersonalInfoActivity.class);
+            startActivity(intent);
+        });
+
+        tvFaq.setOnClickListener(v -> {
+            Toast.makeText(getContext(), "Security", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getActivity(), SecurityActivity.class);
+            startActivity(intent);
+        });
+
+        tvContact.setOnClickListener(v -> {
+            Toast.makeText(getContext(), "Help Center", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getActivity(), ContactUsActivity.class);
+            startActivity(intent);
+        });
+
+        tvShareApp.setOnClickListener(v -> {
+            Toast.makeText(getContext(), "Help Center", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getActivity(), HelpCenterActivity.class);
+            startActivity(intent);
+        });
+
+        tvRating.setOnClickListener(v -> {
+            Toast.makeText(getContext(), "Help Center", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getActivity(), HelpCenterActivity.class);
+            startActivity(intent);
+        });
+
+        tvFeedback.setOnClickListener(v -> {
+            Toast.makeText(getContext(), "Help Center", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getActivity(), HelpCenterActivity.class);
+            startActivity(intent);
+        });
+        
+
+        tvAbout.setOnClickListener(v -> {
+            Toast.makeText(getContext(), "About", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getActivity(), AboutActivity.class);
+            startActivity(intent);
+        });
+
+        tvLogout.setOnClickListener(v -> {
             showLogoutDialog();
         });
-    }
-
-    private void navigateToActivity(Class<?> activityClass, String message) {
-        Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getActivity(), activityClass);
-        startActivity(intent);
     }
 
     private void showLogoutDialog() {
@@ -68,11 +105,24 @@ public class MenuFragment extends Fragment {
         );
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
 
-        dialog.show();
+        Button cancelButton = dialog.findViewById(R.id.cancelButton);
+        Button logoutButton = dialog.findViewById(R.id.logoutButton);
 
-        // Close the activity after showing the dialog
-        if (getActivity() != null) {
-            getActivity().finish();
-        }
+        cancelButton.setOnClickListener(v -> dialog.dismiss());
+
+        logoutButton.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), GetStartActivity.class);
+            startActivity(intent);
+
+            dialog.dismiss();
+            if (getActivity() != null) {
+                Toast.makeText(requireContext(), "Logged Out", Toast.LENGTH_SHORT).show();
+                getActivity().finish();
+            }
+        });
+
+        dialog.show();
     }
-}  
+
+}
+

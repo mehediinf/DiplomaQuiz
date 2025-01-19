@@ -4,21 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MenuFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
+        >
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#FFFFFF">
+        >
 
         <!-- Premium Banner -->
         <LinearLayout
             android:id="@+id/premium_banner"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.2"
+            android:layout_height="100dp"
             android:orientation="vertical"
             android:layout_margin="15dp"
             android:gravity="bottom|left"
@@ -40,6 +44,8 @@
         </LinearLayout>
 
         <!-- Options List -->
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -84,7 +90,7 @@
                         />
                 </LinearLayout>
 
-                <!-- Notification -->
+                <!-- Contact -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -97,19 +103,19 @@
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@drawable/baseline_security_24"
+                        android:src="@drawable/contact_icon"
                         android:layout_marginStart="15dp"
                         />
 
                     <TextView
-                        android:id="@+id/tv_Security"
+                        android:id="@+id/tv_ContactUs"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:layout_marginStart="16dp"
                         android:layout_gravity="center"
                         android:gravity="center|left"
-                        android:text="Security"
+                        android:text="Contact us"
                         android:textColor="#212121"
                         android:textSize="16sp" />
 
@@ -121,7 +127,7 @@
                         />
                 </LinearLayout>
 
-                <!-- Music & Effects -->
+                <!-- FAQ -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -139,14 +145,14 @@
                         />
 
                     <TextView
-                        android:id="@+id/tv_HelpCenter"
+                        android:id="@+id/tv_FAQ"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:layout_marginStart="16dp"
                         android:layout_gravity="center"
                         android:gravity="center|left"
-                        android:text="Help Center"
+                        android:text="FAQ"
                         android:textColor="#212121"
                         android:textSize="16sp" />
 
@@ -159,6 +165,111 @@
                 </LinearLayout>
 
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/sharing_icon"
+                        android:layout_marginStart="15dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_ShareApp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Share App"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_feedback_24"
+                        android:layout_marginStart="15dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_Feedback"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Feedback"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_rating_24"
+                        android:layout_marginStart="15dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_AppRating"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="App Rating"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -229,8 +340,9 @@
                 </LinearLayout>
 
             </LinearLayout>
+
     </LinearLayout>
 
-
+    </ScrollView>
 
 </FrameLayout>
