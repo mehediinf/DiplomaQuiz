@@ -13,7 +13,43 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".SingleQuizActivity"
+            android:name=".JobSyllabusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GroupExamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LiveExamScoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LiveExamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MCQActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SpecialExamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DepartmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StudyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AllSubjectsQuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GeneralKnowledgeQuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MathQuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EnglishQuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BanglaQuizActivity"
             android:exported="false" />
         <activity
             android:name=".FeedbackActivity"
@@ -23,9 +59,6 @@
             android:exported="false" />
         <activity
             android:name=".ContactUsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AccessibilityActivity"
             android:exported="false" />
         <activity
             android:name=".PrivacyActivity"
@@ -38,9 +71,6 @@
             android:exported="false" />
         <activity
             android:name=".HelpCenterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SecurityActivity"
             android:exported="false" />
         <activity
             android:name=".PersonalInfoActivity"

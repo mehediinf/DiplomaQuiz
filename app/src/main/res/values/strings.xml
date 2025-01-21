@@ -26,14 +26,15 @@
     <string name="create_a_new_password">Create a new password</string>
     <string name="confirm_a_new_password">Confirm a new password</string>
     <string name="CreateNewPassDes">Save the new password in a safe place.If you forget it then you have to do a forgot password again.</string>
-    <string name="quiz">Quiz</string>
+    <string name="quiz">MCQ</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="live_quiz">Live Quiz</string>
-    <string name="group_quiz">Group Quiz</string>
-    <string name="leaderboard">Leaderboard</string>
+    <string name="live_quiz">Live Exam</string>
+    <string name="group_quiz">Group Exam</string>
+    <string name="group_syllabus">Job Syllabus</string>
+    <string name="leaderboard">Live Exam Score</string>
     <string name="special_exam">Special Exam</string>
 
     <string name="security_txt"><![CDATA[
