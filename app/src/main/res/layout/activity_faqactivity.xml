@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_all"
+    android:gravity="center"
+    tools:context=".FAQActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#1B74BA"
+        android:titleTextColor="@color/black" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="সচরাচর জিজ্ঞাসিত প্রশ্ন"
+        android:textSize="25sp"
+        android:textColor="#60A312"
+        android:gravity="center"
+        />
+
+    <View
+        android:layout_width="150dp"
+        android:layout_height="1dp"
+        android:background="@color/dark_gray"
+        android:layout_marginBottom="20dp"
+        />
+
+
+    <ExpandableListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/expandableListView_Id"
+
+        />
+
+
+
+
+
+
+</LinearLayout>

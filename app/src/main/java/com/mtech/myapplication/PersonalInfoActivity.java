@@ -41,9 +41,7 @@ public class PersonalInfoActivity extends BaseActivity {
         setListeners();
     }
 
-    /**
-     * Initializes all views used in the activity.
-     */
+
     private void initializeViews() {
         edtFullName = findViewById(R.id.edt_FullName);
         edtEmail = findViewById(R.id.edt_Email);
@@ -56,9 +54,7 @@ public class PersonalInfoActivity extends BaseActivity {
         btnUpdate = findViewById(R.id.btn_Update);
     }
 
-    /**
-     * Sets up event listeners for user interactions.
-     */
+
     private void setListeners() {
         // Edit profile picture button click
         editButton.setOnClickListener(v -> openGallery());
@@ -70,17 +66,13 @@ public class PersonalInfoActivity extends BaseActivity {
         btnUpdate.setOnClickListener(v -> validateAndSubmitData());
     }
 
-    /**
-     * Opens the device gallery to choose a profile picture.
-     */
+
     private void openGallery() {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(intent, 100); // 100 is the request code
     }
 
-    /**
-     * Shows a date picker dialog for selecting the date of birth.
-     */
+
     private void showDatePicker() {
         final Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);

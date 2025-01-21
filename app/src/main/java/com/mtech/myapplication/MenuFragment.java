@@ -47,44 +47,50 @@ public class MenuFragment extends Fragment {
 
     private void setMenuItemClickListeners() {
         tvPrsonal.setOnClickListener(v -> {
-            Toast.makeText(getContext(), "Personal Info", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(getActivity(), PersonalInfoActivity.class);
             startActivity(intent);
         });
 
         tvFaq.setOnClickListener(v -> {
-            Toast.makeText(getContext(), "Security", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(getActivity(), SecurityActivity.class);
+            Intent intent = new Intent(getActivity(), FAQActivity.class);
             startActivity(intent);
         });
 
         tvContact.setOnClickListener(v -> {
-            Toast.makeText(getContext(), "Help Center", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(getActivity(), ContactUsActivity.class);
             startActivity(intent);
         });
 
         tvShareApp.setOnClickListener(v -> {
-            Toast.makeText(getContext(), "Help Center", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(getActivity(), HelpCenterActivity.class);
-            startActivity(intent);
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/plain");
+
+            String subject = "DiplomaQuiz অ্যাপটি ব্যবহার করে দেখুন!";
+            String body = "প্রিয়,\n\nআমি একটি চমৎকার অ্যাপ পেয়েছি যার নাম DiplomaQuiz। এটি ডিপ্লোমা পরীক্ষার প্রস্তুতির জন্য অসাধারণ। এখানে বিভিন্ন ধরনের কুইজ এবং রিসোর্স রয়েছে যা শিক্ষার্থীদের সহায়তা করবে।\n\nএখনই ডাউনলোড করুন Google Play Store থেকে:\nhttps://play.google.com/store/apps/details?id= getPackageName()" + "\n\nশুভ শিক্ষার পথে অগ্রসর হোন!";
+
+
+            intent.putExtra(Intent.EXTRA_SUBJECT,subject);
+            intent.putExtra(Intent.EXTRA_TEXT,body);
+
+            startActivity(Intent.createChooser(intent,"Share with"));
+
+
+
+
         });
 
         tvRating.setOnClickListener(v -> {
-            Toast.makeText(getContext(), "Help Center", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(getActivity(), HelpCenterActivity.class);
             startActivity(intent);
         });
 
         tvFeedback.setOnClickListener(v -> {
-            Toast.makeText(getContext(), "Help Center", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(getActivity(), HelpCenterActivity.class);
+            Intent intent = new Intent(getActivity(), FeedbackActivity.class);
             startActivity(intent);
         });
         
 
         tvAbout.setOnClickListener(v -> {
-            Toast.makeText(getContext(), "About", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(getActivity(), AboutActivity.class);
             startActivity(intent);
         });
