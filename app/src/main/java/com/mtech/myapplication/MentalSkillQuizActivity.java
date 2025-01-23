@@ -8,19 +8,19 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class SpecialExamActivity extends BaseActivity {
-
-
+public class MentalSkillQuizActivity extends AppCompatActivity {
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_special_exam);
+        setContentView(R.layout.activity_mental_skill_quiz);
 
-        // Toolbar setup
-        setupToolbar("Special Exam", true);
+
+
+
+
 
 
 

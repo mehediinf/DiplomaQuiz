@@ -65,6 +65,9 @@
         <p>আপনার অভিজ্ঞতার আলোকে আমাদের মতামত দিন। আমাদের Apps কে আরও কার্যকর করার জন্য আপনার পরামর্শের অপেক্ষায় আছি।</p>
         <p><i>ধন্যবাদ!</i></p>]]>
     </string>
+    <string name="department_study_description">জব এবং ডুয়েট এডমিশন এর জন্য ডিপার্টমেন্ট MCQ পড়াশোনা</string>
+    <string name="department_exam_description">ডিপার্টমেন্ট MCQ পরীক্ষা </string>
+    <string name="non_department_study_description">জবের জন্য নন-ডিপার্টমেন্ট MCQ পড়াশোনা </string>
 
 
     <!-- Developer Information -->

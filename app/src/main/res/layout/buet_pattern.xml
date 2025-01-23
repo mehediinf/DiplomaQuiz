@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="20dp"
+    android:orientation="vertical">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#BDF182"
+        android:title="BUET প্যাটার্ন"
+        android:titleTextColor="#000000" />
+
+    <!-- ScrollView for Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BUET প্যাটার্ন"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="#000000" />
+            <View
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:background="#000000"
+                android:layout_gravity="center" />
+
+            <!-- Table Layout for Pattern 1 -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1"
+                android:background="#EEEEEE"
+                android:padding="8dp"
+                android:layout_marginTop="16dp">
+
+                <!-- Pattern 1 Header -->
+                <TableRow
+                    android:background="@drawable/border">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাটার্ন - ০১ (পূর্ণমান - ১০০)"
+                        android:textSize="18sp"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_span="2"
+                        android:textColor="#000000" />
+                </TableRow>
+
+                <!-- Non-Department Section -->
+                <TableRow
+                    android:background="@drawable/border">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="নন ডিপার্টমেন্ট (৬০ মার্ক):"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:layout_span="2" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/border">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• বাংলা (১০ মার্ক)"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:background="@drawable/border"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• ইংরেজি (১০ মার্ক)"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:background="@drawable/border"
+                        android:textColor="#000000" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/border">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="• সাধারণ জ্ঞান (১০ মার্ক)"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:background="@drawable/border"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="• মানসিক দক্ষতা ও \nসাধারণ গণিত (২০ মার্ক)"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:background="@drawable/border"
+                        android:textColor="#000000" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/border">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• পাওয়ার সেক্টর (১০ মার্ক)"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:background="@drawable/border"
+                        android:textColor="#000000"
+                        android:layout_span="2" />
+                </TableRow>
+
+                <!-- Department Section -->
+                <TableRow
+                    android:background="@drawable/border">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ডিপার্টমেন্ট (৪০ মার্ক):"
+                        android:textSize="15sp"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:layout_span="2" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/border">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• ম্যাথ"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:background="@drawable/border"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• থিউরি"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:background="@drawable/border"
+                        android:textColor="#000000" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/border">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• ড্রইং"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:background="@drawable/border"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• ডায়াগ্রাম"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:background="@drawable/border"
+                        android:textColor="#000000" />
+                </TableRow>
+
+            </TableLayout>
+
+            <!-- Table Layout for Pattern 2 -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1"
+                android:background="#EEEEEE"
+                android:padding="8dp"
+                android:layout_marginTop="16dp">
+
+                <!-- Pattern 2 Header -->
+                <TableRow
+                    android:background="@drawable/border">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="প্যাটার্ন - ০২ (পূর্ণমান - ৬০)"
+                        android:textSize="18sp"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_span="2"
+                        android:textColor="#000000" />
+                </TableRow>
+
+                <!-- Section 1 -->
+                <TableRow
+                    android:background="@drawable/border">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="নন ডিপার্টমেন্ট (২০ মার্ক):"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:layout_span="2" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/border">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• বাংলা (৬ মার্ক)"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:background="@drawable/border"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• ইংরেজি (৬ মার্ক)"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:background="@drawable/border"
+                        android:textColor="#000000" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/border">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="• সাধারণ জ্ঞান (৮ মার্ক)"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                </TableRow>
+
+                <!-- Section 2 -->
+                <TableRow
+                    android:background="@drawable/border">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ডিপার্টমেন্ট (৪০ মার্ক):"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:layout_span="2" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/border">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• ম্যাথ"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:background="@drawable/border"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• থিউরি"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:background="@drawable/border"
+                        android:textColor="#000000" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/border">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• ড্রইং"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:background="@drawable/border"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• ডায়াগ্রাম"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:background="@drawable/border"
+                        android:textColor="#000000" />
+                </TableRow>
+
+            </TableLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="দ্রষ্টব্য: কিছু ক্ষেত্রে ব্যতিক্রমও আছে। "
+                android:textColor="#E91818"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </ScrollView>
+
+</LinearLayout>

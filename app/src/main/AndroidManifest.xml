@@ -13,6 +13,60 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".BacisComputerStudyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InternatinalStudyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BangladeshStudyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MentalSkillsStudyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GeneralScienceStudyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EnglishStudyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MathStudyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BanglaStudyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecentStudyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ComputerStudyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MechanicalStudyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CivilStudyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ElectricalStudyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ComputerQuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MentalSkillQuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GeneralScienceQuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InternationalQuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BangladeshQuizActivity"
+            android:exported="false" />
+        <activity
             android:name=".JobSyllabusActivity"
             android:exported="false" />
         <activity

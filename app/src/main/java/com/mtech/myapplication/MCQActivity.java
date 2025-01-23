@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MCQActivity extends BaseActivity {
 
-    private LinearLayout llBangla, llEnglish, llMath, llGenKnow, llAllSubject;
+    private LinearLayout llAllSubject,llBangla, llEnglish, llMath, llBangladesh,llInternational,llGeneralScience,llMentalSkill,llComputer ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,24 +24,35 @@ public class MCQActivity extends BaseActivity {
         setContentView(R.layout.activity_mcqactivity);
 
 // Toolbar setup
-        setupToolbar("Quiz", true);
+        setupToolbar("MCQ", true);
 
         // LinearLayout Initialization
+        llAllSubject = findViewById(R.id.ll_AllSubject);
         llBangla = findViewById(R.id.ll_Bangla);
         llEnglish = findViewById(R.id.ll_English);
         llMath = findViewById(R.id.ll_Math);
-        llGenKnow = findViewById(R.id.ll_GeneralKnowledge);
-        llAllSubject = findViewById(R.id.ll_AllSubject);
+        llBangladesh = findViewById(R.id.ll_BangladeshGK);
+        llInternational = findViewById(R.id.ll_InternationalGlK);
+        llGeneralScience = findViewById(R.id.ll_GeneralScience);
+        llMentalSkill = findViewById(R.id.ll_Mentalskills);
+        llComputer = findViewById(R.id.ll_Computer);
 
-        // Set click listeners with specific actions and messages
-        setClickListener(llBangla, "বাংলা", "আপনি কি বাংলা কুইজ শুরু করতে চান?\n\n ২৫টি প্রশ্ন, ২৫ নম্বর, ২০ মিনিট।", BanglaQuizActivity.class);
-        setClickListener(llEnglish, "ইংরেজি", "আপনি কি ইংরেজি কুইজ শুরু করতে চান?\n\n ২৫টি প্রশ্ন, ২৫ নম্বর, ২০ মিনিট।", EnglishQuizActivity.class);
-        setClickListener(llMath, "গণিত", "আপনি কি গণিত কুইজ শুরু করতে চান?\n\n ২৫টি প্রশ্ন, ২৫ নম্বর, ২০ মিনিট।", MathQuizActivity.class);
-        setClickListener(llGenKnow, "সাধারণ জ্ঞান", "আপনি কি সাধারণ জ্ঞান কুইজ শুরু করতে চান?\n\n ২৫টি প্রশ্ন, ২৫ নম্বর, ২০ মিনিট।", GeneralKnowledgeQuizActivity.class);
-        setClickListener(llAllSubject, "সমস্ত বিষয়", "আপনি কি সমস্ত বিষয় কুইজ শুরু করতে চান?\n\n  ৮০টি প্রশ্ন, ৮০ নম্বর, ৬০ মিনিট।", AllSubjectsQuizActivity.class);
+
+// Set click listeners with specific actions and messages
+        setClickListener(llAllSubject, "সমস্ত বিষয়", "আপনি কি সমস্ত বিষয় পরীক্ষা শুরু করতে চান?\n\n  ৮০টি প্রশ্ন, ৮০ নম্বর, ৬০ মিনিট।", AllSubjectsQuizActivity.class);
+        setClickListener(llBangla, "বাংলা", "আপনি কি বাংলা পরীক্ষা শুরু করতে চান?\n\n ২৫টি প্রশ্ন, ২৫ নম্বর, ২০ মিনিট।", BanglaQuizActivity.class);
+        setClickListener(llEnglish, "ইংরেজি", "আপনি কি ইংরেজি পরীক্ষা শুরু করতে চান?\n\n ২৫টি প্রশ্ন, ২৫ নম্বর, ২০ মিনিট।", EnglishQuizActivity.class);
+        setClickListener(llMath, "গণিত", "আপনি কি গণিত পরীক্ষা শুরু করতে চান?\n\n ২৫টি প্রশ্ন, ২৫ নম্বর, ২০ মিনিট।", MathQuizActivity.class);
+        setClickListener(llBangladesh, "বাংলাদেশ", "আপনি কি বাংলাদেশ পরীক্ষা শুরু করতে চান?\n\n ২৫টি প্রশ্ন, ২৫ নম্বর, ২০ মিনিট।", BangladeshQuizActivity.class);
+        setClickListener(llInternational, "আন্তর্জাতিক", "আপনি কি আন্তর্জাতিক পরীক্ষা শুরু করতে চান?\n\n ২৫টি প্রশ্ন, ২৫ নম্বর, ২০ মিনিট।", InternationalQuizActivity.class);
+        setClickListener(llGeneralScience, "সাধারণ বিজ্ঞান", "আপনি কি সাধারণ বিজ্ঞান পরীক্ষা শুরু করতে চান?\n\n ২৫টি প্রশ্ন, ২৫ নম্বর, ২০ মিনিট।", GeneralScienceQuizActivity.class);
+        setClickListener(llMentalSkill, "মানসিক দক্ষতা", "আপনি কি মানসিক দক্ষতা পরীক্ষা শুরু করতে চান?\n\n ২৫টি প্রশ্ন, ২৫ নম্বর, ২০ মিনিট।", MentalSkillQuizActivity.class);
+        setClickListener(llComputer, "কম্পিউটার", "আপনি কি কম্পিউটার পরীক্ষা শুরু করতে চান?\n\n ২৫টি প্রশ্ন, ২৫ নম্বর, ২০ মিনিট।", ComputerQuizActivity.class);
+
+
     }
 
-    // কাস্টম ডায়ালগ প্রদর্শনের ফাংশন
+// কাস্টম ডায়ালগ প্রদর্শনের ফাংশন
     private void showCustomDialog(String subject, String message, Class<?> targetActivity) {
         // Dialog ইনস্ট্যান্স তৈরি
         Dialog dialog = new Dialog(this);
