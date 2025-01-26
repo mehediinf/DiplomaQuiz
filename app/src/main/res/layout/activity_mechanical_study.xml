@@ -1,10 +1,575 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MechanicalStudyActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#BDF182"
+        android:titleTextColor="@color/blue_dark" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="সূচিপত্র"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:background="@drawable/btn_shape_capsule"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Personal Info -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_Engineering_Mechanics"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Engineering Mechanics"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+
+                <!-- Contact -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_Machine_Design"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Machine Design"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+
+                <!-- FAQ -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+
+
+                    <TextView
+                        android:id="@+id/tv_Metrology"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Metrology"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginEnd="15dp"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_Strength_of_Materials"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Strength of Materials"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_Engineering_Materials"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Engineering Materials"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_Workshop_Technology"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Workshop Technology"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_Hydraulics_and_Fluid_Mechanics"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Hydraulics &amp; Fluid Mechanics"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_Hydraulic_Machines"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Hydraulic Machines"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_Thermodynamics"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Thermodynamics"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_Steam_Boiler_and_Engines"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Steam Boiler and Engines"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_Steam_Nozzle_and_Turbine"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Steam Nozzle and Turbine"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_IC_Engine_and_Nuclear_Power_Plant"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="IC Engine and Nuclear Power Plant"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_Compressors_Gas_Turbines"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Compressors, Gas Turbines"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_Heat_Transfer_RAC"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Heat Transfer, Refrigeration &amp; Air Conditioning (RAC)"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_Production_Engineering"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Production Engineering"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_Industrial_Engineering_and_Production"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Industrial Engineering and Production"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/buttonshape"
+                    android:layout_margin="3dp"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_Automobile_Engineering"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Automobile Engineering"
+                        android:textColor="#212121"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

@@ -131,5 +131,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp" />
+
+        <!-- Button to add new data -->
+        <Button
+            android:id="@+id/btn_add_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Data"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
     </LinearLayout>
 </FrameLayout>

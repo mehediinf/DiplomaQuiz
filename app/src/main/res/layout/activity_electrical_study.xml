@@ -1,10 +1,482 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ElectricalStudyActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#BDF182"
+        android:titleTextColor="@color/blue_dark" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="সূচিপত্র"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:background="@drawable/btn_shape_capsule"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Personal Info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/buttonshape"
+                android:layout_margin="3dp"
+                >
+
+
+                <TextView
+                    android:id="@+id/tv_DC_Circuits"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:text="DC Circuits"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24"
+                    android:layout_marginRight="15dp"
+                    />
+            </LinearLayout>
+
+            <!-- Contact -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/buttonshape"
+                android:layout_margin="3dp"
+                >
+
+
+                <TextView
+                    android:id="@+id/tv_Graphical_Symbol"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:text="Graphical Symbol"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24"
+                    android:layout_marginRight="15dp"
+                    />
+            </LinearLayout>
+
+            <!-- FAQ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/buttonshape"
+                android:layout_margin="3dp"
+                >
+
+
+
+                <TextView
+                    android:id="@+id/tv_Important_Abbreviations"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:text="Important Abbreviations"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24"
+                    android:layout_marginEnd="15dp"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/buttonshape"
+                android:layout_margin="3dp"
+                >
+
+
+                <TextView
+                    android:id="@+id/tv_AC_Circuits"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:text="AC Circuits"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24"
+                    android:layout_marginRight="15dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/buttonshape"
+                android:layout_margin="3dp"
+                >
+
+
+                <TextView
+                    android:id="@+id/tv_Power_Sector"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:text="Power Sector"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24"
+                    android:layout_marginRight="15dp"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/buttonshape"
+                android:layout_margin="3dp"
+                >
+
+
+                <TextView
+                    android:id="@+id/tv_DC_Machine"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:text="DC Machine"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24"
+                    android:layout_marginRight="15dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/buttonshape"
+                android:layout_margin="3dp"
+                >
+
+
+                <TextView
+                    android:id="@+id/tv_Digital_Electronics"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:text="Digital Electronics"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24"
+                    android:layout_marginRight="15dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/buttonshape"
+                android:layout_margin="3dp"
+                >
+
+
+                <TextView
+                    android:id="@+id/tv_AC_Machine"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:text="AC Machine"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24"
+                    android:layout_marginRight="15dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/buttonshape"
+                android:layout_margin="3dp"
+                >
+
+
+                <TextView
+                    android:id="@+id/tv_Power_System"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:text="Power System"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24"
+                    android:layout_marginRight="15dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/buttonshape"
+                android:layout_margin="3dp"
+                >
+
+
+                <TextView
+                    android:id="@+id/tv_Telecommunication_Part"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:text="Telecommunication Part"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24"
+                    android:layout_marginRight="15dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/buttonshape"
+                android:layout_margin="3dp"
+                >
+
+
+                <TextView
+                    android:id="@+id/tv_Control_System"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:text="Control System"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24"
+                    android:layout_marginRight="15dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/buttonshape"
+                android:layout_margin="3dp"
+                >
+
+
+                <TextView
+                    android:id="@+id/tv_Electronics"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:text="Electronics"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24"
+                    android:layout_marginRight="15dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/buttonshape"
+                android:layout_margin="3dp"
+                >
+
+
+                <TextView
+                    android:id="@+id/tv_Engineering_Materials"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:text="Engineering Materials"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24"
+                    android:layout_marginRight="15dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/buttonshape"
+                android:layout_margin="3dp"
+                >
+
+
+                <TextView
+                    android:id="@+id/tv_Electrical_and_Electronics_Measurement"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:text="Electrical and Electronics Measurement"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24"
+                    android:layout_marginRight="15dp"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    </ScrollView>
+
+</LinearLayout>

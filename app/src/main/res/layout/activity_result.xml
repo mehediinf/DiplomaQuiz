@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ResultActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#BDF182"
+        android:titleTextColor="@color/blue_dark" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:orientation="vertical"
+        >
+        <!-- Display the quiz result -->
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Score: "
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center|left"
+            android:paddingLeft="20dp"
+            android:background="@drawable/buttonshape"
+            android:layout_marginBottom="20dp"
+            android:paddingRight="16dp" />
+
+        <!-- Display additional statistics -->
+        <TextView
+            android:id="@+id/tv_stats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Statistics"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center|left"
+            android:paddingLeft="20dp"
+            android:background="@drawable/buttonshape"
+            android:layout_marginBottom="20dp"
+            android:paddingRight="16dp"/>
+
+        <!-- Restart Quiz Button -->
+        <Button
+            android:id="@+id/btn_restart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Restart Quiz" />
+
+
+
+        <Button
+            android:id="@+id/btn_preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preview" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
