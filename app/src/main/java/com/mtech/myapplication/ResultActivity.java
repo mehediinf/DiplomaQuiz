@@ -7,19 +7,14 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-public class ResultActivity extends BaseActivity {
+public class ResultActivity extends AppCompatActivity {
 
     private static final String PREFS_NAME = "QuizAppPrefs";
     private static final String KEY_BEST_SCORE = "BestScore";
     private static final String KEY_TOTAL_SCORE = "TotalScore";
     private static final String KEY_TOTAL_QUIZZES = "TotalQuizzes";
-
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -27,15 +22,13 @@ public class ResultActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-// Toolbar setup
-        setupToolbar("Result", true);
-
         // Retrieve data from Intent
         int score = getIntent().getIntExtra("score", 0);
         int totalQuestions = getIntent().getIntExtra("totalQuestions", 0);
 
         // SharedPreferences to store and retrieve data
         SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        String examHistoryJson = prefs.getString("ExamHistory", "[]");
         SharedPreferences.Editor editor = prefs.edit();
 
         // Get previous best score, total score, and total quizzes
@@ -75,32 +68,17 @@ public class ResultActivity extends BaseActivity {
         // Restart Quiz Button
         Button restartButton = findViewById(R.id.btn_restart);
         restartButton.setOnClickListener(v -> {
-          //  Intent intent = new Intent(ResultActivity.this, QuizActivity.class);
-           // startActivity(intent);
+            Intent intent = new Intent(ResultActivity.this, AllSubjectsQuizActivity.class);
+            startActivity(intent);
             finish(); // Close ResultActivity
         });
-
-
 
         // Add a Preview Button in onCreate()
         Button previewButton = findViewById(R.id.btn_preview);
         previewButton.setOnClickListener(v -> {
-           // Intent intent = new Intent(ResultActivity.this, PreviewActivity.class);
-            //startActivity(intent);
+            Intent intent = new Intent(ResultActivity.this, PreviewAllExamActivity.class);
+            intent.putExtra("examHistory", examHistoryJson);  // Pass the exam history to preview
+            startActivity(intent);
         });
-
-
-
-
-
-
-
     }
 }
-
-
-
-
-
-
-

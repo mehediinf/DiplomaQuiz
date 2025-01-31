@@ -27,4 +27,10 @@
     <color name="bottom_nav_icon_color">#000000</color> <!-- Icon রঙ -->
     <color name="bottom_nav_text_color">#000000</color>
 
+    <color name="correctAnswer">#4CAF50</color> <!-- Green for correct answer -->
+    <color name="selectedAnswer">#FF5252</color> <!-- Red for selected answer -->
+    <color name="defaultAnswer">#000000</color> <!-- Black for other options -->
+    <color name="primaryText">#333333</color>
+    <color name="cardBackground">#f9f9f9</color>
+
 </resources>

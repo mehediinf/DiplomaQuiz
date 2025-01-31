@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#E7EFDE"
     tools:context=".ResultActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -31,6 +32,7 @@
             android:layout_gravity="center_horizontal"
             android:gravity="center|left"
             android:paddingLeft="20dp"
+            android:textColor="@color/black"
             android:background="@drawable/buttonshape"
             android:layout_marginBottom="20dp"
             android:paddingRight="16dp" />
@@ -45,6 +47,7 @@
             android:layout_gravity="center_horizontal"
             android:gravity="center|left"
             android:paddingLeft="20dp"
+            android:textColor="@color/black"
             android:background="@drawable/buttonshape"
             android:layout_marginBottom="20dp"
             android:paddingRight="16dp"/>
@@ -54,7 +57,12 @@
             android:id="@+id/btn_restart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Restart Quiz" />
+            android:background="@drawable/btn_shape_capsule"
+            android:textSize="19sp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
+            android:text="Again" />
 
 
 
@@ -62,6 +70,11 @@
             android:id="@+id/btn_preview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/btn_shape_capsule"
+            android:textSize="19sp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
             android:text="Preview" />
 
     </LinearLayout>

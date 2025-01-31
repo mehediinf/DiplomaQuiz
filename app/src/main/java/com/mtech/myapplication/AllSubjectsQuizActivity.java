@@ -3,6 +3,7 @@ package com.mtech.myapplication;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -15,8 +16,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.bumptech.glide.load.resource.bitmap.CenterInside;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -80,6 +79,7 @@ public class AllSubjectsQuizActivity extends AppCompatActivity {
             questionText.setText(String.format("%d. %s", questionNumber, question.getQuestionText()));
             questionText.setTextSize(16);
             questionText.setTypeface(Typeface.DEFAULT_BOLD);
+            questionText.setTextColor(Color.BLACK); // Set text color to black
             questionContainer.addView(questionText);
 
             // Add options
@@ -88,6 +88,7 @@ public class AllSubjectsQuizActivity extends AppCompatActivity {
                 RadioButton option = new RadioButton(this);
                 option.setText(question.getOptions()[i]);
                 option.setId(i);
+                option.setTextColor(Color.BLACK); // Set text color to black
 
                 // Add Click Listener to Make it Unclickable After Selection
                 option.setOnClickListener(v -> {
@@ -107,13 +108,13 @@ public class AllSubjectsQuizActivity extends AppCompatActivity {
         Button submitButton = new Button(this);
         submitButton.setText("Submit");
 
-// Set background and text styles
+        // Set background and text styles
         submitButton.setBackground(getResources().getDrawable(R.drawable.btn_shape_capsule)); // Capsule shape background
         submitButton.setTextSize(18); // Text size
         submitButton.setTextColor(getResources().getColor(R.color.white)); // Text color
         submitButton.setPadding(15, 7, 15, 7); // Padding for inner spacing
 
-// Set button size and margins
+        // Set button size and margins
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT, // Button width
                 LinearLayout.LayoutParams.WRAP_CONTENT  // Button height
@@ -122,16 +123,14 @@ public class AllSubjectsQuizActivity extends AppCompatActivity {
         params.gravity = Gravity.CENTER; // Center the button horizontally in its container
         submitButton.setLayoutParams(params);
 
-// Add shadow for modern look
+        // Add shadow for modern look
         submitButton.setElevation(8);
 
-// Set OnClickListener
+        // Set OnClickListener
         submitButton.setOnClickListener(v -> handleSubmit());
 
-// Add the button to the container
+        // Add the button to the container
         questionContainer.addView(submitButton);
-
-
     }
 
     /**
@@ -146,19 +145,23 @@ public class AllSubjectsQuizActivity extends AppCompatActivity {
         int totalQuestions = questions.size();
         int questionIndex = 0;
 
+        JSONArray questionResults = new JSONArray(); // Store results of each question
+
         for (int i = 0; i < questionContainer.getChildCount(); i++) {
             View view = questionContainer.getChildAt(i);
             if (view instanceof RadioGroup) {
                 RadioGroup group = (RadioGroup) view;
                 int selectedId = group.getCheckedRadioButtonId();
-                if (selectedId != -1 && questions.get(questionIndex).getCorrectAnswerIndex() == selectedId) {
+                String result = (selectedId != -1 && questions.get(questionIndex).getCorrectAnswerIndex() == selectedId) ? "Correct" : "Incorrect";
+                questionResults.put("Q" + (questionIndex + 1) + ": " + result); // Add question result
+                if (result.equals("Correct")) {
                     score++;
                 }
                 questionIndex++;
             }
         }
 
-        saveExamHistory(score, totalQuestions);
+        saveExamHistory(score, totalQuestions, questionResults); // Pass question results
 
         // Navigate to ResultActivity
         Intent intent = new Intent(AllSubjectsQuizActivity.this, ResultActivity.class);
@@ -171,27 +174,25 @@ public class AllSubjectsQuizActivity extends AppCompatActivity {
     /**
      * Saves the exam history in SharedPreferences.
      */
-    private void saveExamHistory(int score, int totalQuestions) {
+    private void saveExamHistory(int score, int totalQuestions, JSONArray questionResults) {
         SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
 
         String history = prefs.getString("ExamHistory", "[]");
         try {
-
             JSONArray examHistory = new JSONArray(history);
             JSONObject currentExam = new JSONObject();
+            currentExam.put("examName", "Sample Exam");
+            currentExam.put("date", "2025-01-27");
             currentExam.put("score", score);
             currentExam.put("totalQuestions", totalQuestions);
+            currentExam.put("results", questionResults); // Add the results of each question
+
             examHistory.put(currentExam);
             editor.putString("ExamHistory", examHistory.toString());
             editor.apply();
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-
-
     }
 }
-
-
