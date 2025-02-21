@@ -131,6 +131,7 @@
             android:text="Exam History"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:textColor="@color/black"
             android:paddingBottom="8dp" />
 
         <androidx.recyclerview.widget.RecyclerView

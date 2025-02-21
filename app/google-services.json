@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "636054256800",
+    "project_id": "diplomaquiz-2aef2",
+    "storage_bucket": "diplomaquiz-2aef2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636054256800:android:eb2374d20ceab32cf69dc5",
+        "android_client_info": {
+          "package_name": "com.mtech.diplomaquiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "636054256800-2s7msr1ffg93bgifgrbrer2tbl0scrfk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mtech.diplomaquiz",
+            "certificate_hash": "065202a5fb96cfaf9c7d77414fee54671f45e693"
+          }
+        },
+        {
+          "client_id": "636054256800-bcj9oqpqh06bgkstp01q82tl13j77ge5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWq2XCe_qhtvlPFumhFO60BGC3s18gnHs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "636054256800-bcj9oqpqh06bgkstp01q82tl13j77ge5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636054256800:android:c99320dbb38f3480f69dc5",
+        "android_client_info": {
+          "package_name": "com.mtech.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "636054256800-bcj9oqpqh06bgkstp01q82tl13j77ge5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWq2XCe_qhtvlPFumhFO60BGC3s18gnHs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "636054256800-bcj9oqpqh06bgkstp01q82tl13j77ge5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

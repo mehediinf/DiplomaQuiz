@@ -21,15 +21,9 @@ public class CreateAccountActivity extends BaseActivity {
         setContentView(R.layout.activity_create_account);
 
 
-        // `setupToolbar` মেথড কল করে টাইটেল এবং ব্যাক বাটন সেট করা
         setupToolbar("Create Account", true);
 
-
-
-        // ডায়ালগ দেখানোর জন্য
         showSuccessDialog();
-
-
     }
 
     private void showSuccessDialog() {
